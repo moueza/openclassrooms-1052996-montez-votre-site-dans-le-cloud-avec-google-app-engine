@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app
 	xmlns="http://appengine.google.com/ns/1.0">
-	<application></application>
+	<application>ocr-montez-p1c3sub4</application>
 	<version>1</version>
 
 	<!-- Allows App Engine to send multiple requests to one instance in parallel: -->
@@ -19,11 +19,13 @@
 		data to the datastore: <async-session-persistence enabled="true" /> With 
 		this feature enabled, there is a very small chance your app will see stale 
 		session data. For details, see https://cloud.google.com/appengine/docs/java/config/appconfig#Java_appengine_web_xml_Enabling_sessions -->
+	<!-- <sessions-enabled>true</sessions-enabled> -->
 
 	<static-files>
 		<include path="/**.png" />
 		<include path="/javascript/*.js" />
 		<exclude path="/generator/**.png" />
 	</static-files>
+	<runtime>java8</runtime>
 </appengine-web-app>
 
